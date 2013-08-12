@@ -1,0 +1,17 @@
+{
+  "extension": {
+    "sass": [
+      "_animation-studio.scss",
+      "animation-studio/**/*"
+    ],
+    "images": [
+      "**"
+    ],
+    "js": [
+      "**"
+    ],
+    "fonts": [
+      "**"
+    ]
+  }
+}

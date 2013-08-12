@@ -1,1 +1,12 @@
+node_modules
+/components
+.www
 .sass-cache
+.compass/lib
+.compass/stylesheets
+.compass/templates
+Gemfile
+Gemfile.lock
+export
+*.gem
+

@@ -1,0 +1,90 @@
+#########################
+## Extension Information
+##
+## This information is the core information for your Compass extension
+#########################
+extension:
+  name: Animation Studio
+  authors: Sam Richard, Rachel Nabors
+  authorEmails: sam@snug.ug, rachelnabors@gmail.com
+  description: A long description of this awesome compass extension
+  summary: A short summary of this awesome compass extension
+  homepage: https://github.com/team-sass/animation-studio
+  # See http://choosealicense.com/licenses/ to help choose a license that fits your project
+  license: MIT
+
+#########################
+## Source Files
+##
+## The main Sass files for your project.
+## Default setup allows for `@import "animation-studio";` as well as `@import "animation-studio/partial";
+#########################
+sass:
+  - '_animation-studio.scss'
+  - 'animation-studio/**/*'
+
+#########################
+## Templates
+##
+## Templates allow you to install and initialize assets into a project.
+## The `project` template allows for `compass create {project} -r animation-studio --using animation-studio` as well as `compass install animation-studio`
+## Additional templates can be used by appending their name to `animation-studio`, e.g. `compass install animation-studio/examples`
+##
+## Images, JS, Fonts, and Sass are relative to their
+#########################
+templates:
+  project:
+    images:
+      - '**/*'
+      - '!examples/**/*'
+    js:
+      - '**/*'
+      - '!examples/**/*'
+    fonts:
+      - '**/*'
+      - '!examples/**/*'
+  examples:
+    images:
+      - 'examples/**/*'
+    js:
+      - 'examples/**/*'
+    fonts:
+      - 'examples/**/*'
+
+#########################
+## Compass Dependencies
+##
+## Include both the name and version number.
+#########################
+dependencies:
+  sass: '>=3.2.3'
+  compass: '>=0.12.1'
+
+#########################
+## Development Options
+#########################
+server:
+  # Setting hostname to '*' will make the server accessible to your local network and enable remote debugging
+  hostname: 'localhost'
+
+#########################
+## Versioning
+#########################
+bump:
+  # Commit your files to Git after your bump
+  commit: false
+  # What files to commit. -a for all files
+  files:
+    - -a
+  # Create a Git tag after your bump
+  tag: false
+  # Push changes to Git upstream after your bump
+  push: false
+
+#########################
+## Git Options
+#########################
+git:
+  # If you use grunt build --commit, this will be git commit message used
+  defaultCommit: Production build and commit
+  deployUpstream: origin

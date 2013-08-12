@@ -1,0 +1,21 @@
+{
+  "client": {
+    "version": "0.0.0"
+  },
+  "assets": {
+    "htmlDir": "examples",
+    "imagesDir": "images",
+    "cssDir": "css",
+    "sassDir": "sass",
+    "jsDir": "js",
+    "fontsDir": "fonts",
+    "componentsDir": "components"
+  },
+  "server": {
+    "root": ".www",
+    "port": 8000
+  },
+  "export": {
+    "distPath": ".dist"
+  }
+}
