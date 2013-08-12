@@ -58,7 +58,7 @@ templates:
 #########################
 dependencies:
   sass: '>=3.2.3'
-  compass: '>=0.12.1'
+  compass: '>=0.13.alpha.4'
 
 #########################
 ## Development Options
