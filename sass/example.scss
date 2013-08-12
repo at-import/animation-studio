@@ -1,1 +1,9 @@
 @import "animation-studio";
+
+$tuna-walk-cycle: 'tuna-walk';
+@include walk-cycle-sprite-generator($tuna-walk-cycle);
+@include walk-cycle-animation($tuna-walk-cycle);
+
+.tuna {
+  @include walk-cycle($tuna-walk-cycle, 12, 1s);
+}
