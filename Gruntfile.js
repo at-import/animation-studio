@@ -289,7 +289,6 @@ module.exports = function (grunt) {
       options: {
         files: [
           'package.json',
-          'bower.json',
           '.system.json'
         ],
         commit: userConfig.bump.commit,
