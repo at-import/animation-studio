@@ -1,0 +1,44 @@
+@import "compass/utilities/sprites";
+@import "compass/css3/animation";
+
+$walk-cycle-animation-name: 'walk-cycle' !default;
+
+@mixin walk-cycle-sprite-generator($folder) {
+  $png-path: $folder + '/*.png';
+  $png-path: sprite-map($png-path);
+
+  %#{sprite-map-name($png-path)}-walk-cycle {
+    background: $png-path 0 0 no-repeat;
+  }
+}
+
+@mixin walk-cycle($folder, $steps, $time, $animation:$walk-cycle-animation-name) {
+  $png-path: $folder + '/*.png';
+  $sprite-map: sprite-map($png-path);
+  $sprite-path: sprite-path($sprite-map);
+
+  $height: image-height($sprite-path);
+  $width: image-width($sprite-path);
+
+  height: $height / $steps;
+  width: $width;
+
+  @extend %#{sprite-map-name($sprite-map)}-walk-cycle;
+  @include animation(unquote($animation) $time steps($steps) infinite);
+}
+
+@mixin walk-cycle-animation($folder, $name: $walk-cycle-animation-name) {
+  $png-path: $folder + '/*.png';
+  $sprite-map: sprite-map($png-path);
+  $sprite-path: sprite-path($sprite-map);
+  $height: image-height($sprite-path);
+
+  @include keyframes($name) {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 $height * -1;
+    }
+  }
+}
