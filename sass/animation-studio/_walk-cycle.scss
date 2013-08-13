@@ -12,10 +12,12 @@ $walk-cycle-animation-name: 'walk-cycle' !default;
   }
 }
 
-@mixin walk-cycle($folder, $steps, $time, $animation:$walk-cycle-animation-name) {
+@mixin walk-cycle($folder, $time, $animation:$walk-cycle-animation-name) {
   $png-path: $folder + '/*.png';
   $sprite-map: sprite-map($png-path);
   $sprite-path: sprite-path($sprite-map);
+
+  $steps: length(sprite-names($sprite-map));
 
   $height: image-height($sprite-path);
   $width: image-width($sprite-path);

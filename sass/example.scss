@@ -5,5 +5,5 @@ $tuna-walk-cycle: 'tuna-walk';
 @include walk-cycle-animation($tuna-walk-cycle);
 
 .tuna {
-  @include walk-cycle($tuna-walk-cycle, 12, 1s);
+  @include walk-cycle($tuna-walk-cycle, 1s);
 }
