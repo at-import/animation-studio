@@ -9,4 +9,4 @@ Gemfile
 Gemfile.lock
 export
 *.gem
-
+*.DS_Store
