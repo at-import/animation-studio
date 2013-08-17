@@ -5,6 +5,8 @@ node_modules
 .compass/lib
 .compass/stylesheets
 .compass/templates
+.compass/*.gemspec
+!.compass/.template/
 Gemfile
 Gemfile.lock
 export
