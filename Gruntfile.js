@@ -259,7 +259,7 @@ module.exports = function (grunt) {
         }
       },
       tagMake: {
-        cmd: 'git tag ' + userConfig.client.version
+        cmd: 'git tag v' + userConfig.client.version
       },
       tagPush: {
         cmd: 'git push --tags ' + userConfig.git.deployUpstream
