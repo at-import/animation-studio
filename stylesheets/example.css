@@ -1,0 +1,49 @@
+@-moz-keyframes walk-cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 109.09091%;
+  }
+}
+
+@-webkit-keyframes walk-cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 109.09091%;
+  }
+}
+
+@-o-keyframes walk-cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 109.09091%;
+  }
+}
+
+@keyframes walk-cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 109.09091%;
+  }
+}
+
+.tuna {
+  height: 200px;
+  width: 400px;
+  background: url('../images/tuna-walk-s77788462e5.png') 0 0 no-repeat;
+  -webkit-animation: walk-cycle 1s steps(12) infinite;
+  -moz-animation: walk-cycle 1s steps(12) infinite;
+  -o-animation: walk-cycle 1s steps(12) infinite;
+  animation: walk-cycle 1s steps(12) infinite;
+}

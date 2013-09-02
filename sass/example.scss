@@ -1,7 +1,7 @@
 @import "animation-studio";
 
 $tuna-walk-cycle: 'tuna-walk';
-// @include animation-sequence-sprite-generator($tuna-walk-cycle);
+@include animation-sequence-sprite-generator($tuna-walk-cycle);
 @include animation-sequence-keyframes($tuna-walk-cycle);
 
 .tuna {

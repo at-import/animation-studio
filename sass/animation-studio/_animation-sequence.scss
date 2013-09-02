@@ -1,11 +1,11 @@
 @import "compass/utilities/sprites";
 @import "compass/css3/animation";
 
-$animation-sequence-name: 'walk-cycle' !default;
+$animation-sequence-name: "walk-cycle" !default;
 $animation-sequence-extend: true !default;
 
 @mixin animation-sequence-sprite-generator($folder, $generate-extendable: $animation-sequence-extend) {
-  $png-path: $folder + '/*.png';
+  $png-path: $folder + "/*.png";
   $png-path: sprite-map($png-path);
 
   @if $generate-extendable {
@@ -20,7 +20,7 @@ $animation-sequence-extend: true !default;
 }
 
 @mixin animation-sequence($folder, $time, $animation:$animation-sequence-name, $extend: $animation-sequence-extend) {
-  $png-path: $folder + '/*.png';
+  $png-path: $folder + "/*.png";
   $sprite-map: sprite-map($png-path);
   $sprite-path: sprite-path($sprite-map);
 
@@ -43,17 +43,18 @@ $animation-sequence-extend: true !default;
 }
 
 @mixin animation-sequence-keyframes($folder, $name: $animation-sequence-name) {
-  $png-path: $folder + '/*.png';
+  $png-path: $folder + "/*.png";
   $sprite-map: sprite-map($png-path);
   $sprite-path: sprite-path($sprite-map);
   $height: image-height($sprite-path);
+  $steps: length(sprite-names($sprite-map));
 
   @include keyframes($name) {
     0% {
       background-position: 0 0;
     }
     100% {
-      background-position: 0 $height * -1;
+      background-position: 0 ($height/($height - $height / $steps))*100% ;
     }
   }
 }
