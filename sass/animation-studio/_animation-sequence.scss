@@ -49,12 +49,14 @@ $animation-sequence-extend: true !default;
   $height: image-height($sprite-path);
   $steps: length(sprite-names($sprite-map));
 
+  $height: percentage($height / ($height - ($height / $steps)));
+
   @include keyframes($name) {
     0% {
       background-position: 0 0;
     }
     100% {
-      background-position: 0 ($height/($height - $height / $steps))*100% ;
+      background-position: 0 $height;
     }
   }
 }
