@@ -270,6 +270,9 @@ module.exports = function (grunt) {
       install: {
         cmd: 'gem install animation-studio-' + userConfig.client.version + '.gem && rm animation-studio-' + userConfig.client.version + '.gem'
       },
+      release: {
+        cmd: 'gem push animation-studio-' + userConfig.client.version + '.gem && rm animation-studio-' + userConfig.client.version + '.gem'
+      },
       bundle: {
         cmd: function(path) {
           if (path === '.') {
@@ -407,9 +410,14 @@ module.exports = function (grunt) {
     grunt.task.run(['parallel:ext', 'exec:ext']);
 
     var install = grunt.option('install');
+    var release = grunt.option('release');
 
     if (install) {
       grunt.task.run(['exec:install']);
+    }
+
+    if (release) {
+      grunt.task.run(['exec:release']);
     }
   });
 };
