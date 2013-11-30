@@ -1,91 +1,55 @@
-/*
-Syntax error: Undefined mixin 'animation-still'.
-        on line 12 of /Users/rachel/Animation Projects/animation-studio/sass/example.scss, in `animation-still'
-        from line 12 of /Users/rachel/Animation Projects/animation-studio/sass/example.scss
+@-moz-keyframes walk-cycle {
+  0% {
+    background-position: 0 0;
+  }
 
-Backtrace:
-/Users/rachel/Animation Projects/animation-studio/sass/example.scss:12:in `animation-still'
-/Users/rachel/Animation Projects/animation-studio/sass/example.scss:12
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:253:in `visit_mixin'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:320:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:128:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/engine.rb:315:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/lib/sass/../sass/engine.rb:262:in `render'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:146:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:132:in `timed'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:145:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/logger.rb:46:in `red'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:144:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:124:in `compile_if_required'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:109:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:107:in `each'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:107:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:132:in `timed'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:106:in `run'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/compiler.rb:24:in `compile'
-(__FORWARDABLE__):3:in `__send__'
-(__FORWARDABLE__):3:in `compile'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:92:in `sass_modified'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:85:in `sass_callback'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/forwardable.rb:148:in `to_proc'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/watch.rb:17:in `call'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/watch.rb:17:in `run_callback'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:78:in `listen_callback'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:77:in `each'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:77:in `listen_callback'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:76:in `each'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:76:in `listen_callback'
-/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/forwardable.rb:148:in `to_proc'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/listener.rb:212:in `call'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/listener.rb:212:in `on_change'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/listener.rb:221:in `initialize_adapter'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `call'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `start'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `initialize'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `new'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `start'
-/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/listener.rb:49:in `start'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:31:in `watch!'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/commands/watch_project.rb:48:in `perform'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/commands/base.rb:18:in `execute'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/commands/project_base.rb:19:in `execute'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/bin/compass:30
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/bin/compass:44:in `call'
-/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/bin/compass:44
-/usr/bin/compass:19:in `load'
-/usr/bin/compass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'animation-still'.\A         on line 12 of /Users/rachel/Animation Projects/animation-studio/sass/example.scss, in `animation-still'\A         from line 12 of /Users/rachel/Animation Projects/animation-studio/sass/example.scss"; }
+  100% {
+    background-position: 0 109.09091%;
+  }
+}
+
+@-webkit-keyframes walk-cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 109.09091%;
+  }
+}
+
+@-o-keyframes walk-cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 109.09091%;
+  }
+}
+
+@keyframes walk-cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 109.09091%;
+  }
+}
+
+.tuna {
+  height: 200px;
+  width: 400px;
+  background: url('../images/tuna-walk-s77788462e5.png') 0 0 no-repeat;
+  -webkit-animation: walk-cycle 1s steps(12) infinite;
+  -moz-animation: walk-cycle 1s steps(12) infinite;
+  -o-animation: walk-cycle 1s steps(12) infinite;
+  animation: walk-cycle 1s steps(12) infinite;
+}
+
+.tuna-paused {
+  background: url('../images/tuna-walk-s77788462e5.png') 0 27.08333% no-repeat;
+  height: 200px;
+  width: 400px;
+}

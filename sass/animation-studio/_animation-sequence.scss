@@ -62,3 +62,21 @@ $animation-sequence-extend: true !default;
   }
 }
 
+@mixin animation-still($folder, $frame: 1, $generate-dimensions: true) {
+  $png-path: $folder + "/*.png";
+  $sprite-map: sprite-map($png-path);
+  $sprite-path: sprite-path($sprite-map);
+  $height: image-height($sprite-path);
+  $frames: length(sprite-names($sprite-map));
+  $frame-height: $height/$frames; 
+  $frame-position: percentage((($frame * ($frame-height)) - $frame-height + ($frame-height/$frame)) / $height);
+  
+  background: $sprite-map 0 $frame-position no-repeat;
+
+  @if $generate-dimensions {
+    $height: image-height($sprite-path);
+    $width: image-width($sprite-path);
+    height: $height / $frames;
+    width: $width;    
+  }
+}
