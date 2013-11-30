@@ -3,6 +3,7 @@ var _ = require('underscore');
 var _s = require('underscore.string');
 var os = require('os');
 
+
 module.exports = function (grunt) {
 
   //////////////////////////////
@@ -319,6 +320,7 @@ module.exports = function (grunt) {
   // Grunt Task Loads
   //////////////////////////////
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks('grunt-bump');
 
   //////////////////////////////
   // Tag Task

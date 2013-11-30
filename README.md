@@ -75,6 +75,26 @@ Finally, in the selector you'd like to use the sequence in, simply add the follo
 
 The first parameter is the sequence folder and the second is the length of the animation. By default, the name of the animation will be `'walk-cycle'`. You can pass a string as a third parameter in to `animation-sequence` for a different animation name, or you can change the default by changing `$animation-sequence-name: 'my-sequence-name';`. If you would not like to extend the selector generated with `animation-sequence-sprite-generator`, you can pass in a fourth parameter `$extend: false`, or if you'd like to change extending behavior globally, you can set `$animation-sequence-extend: false;`
 
+## Update for version 0.1.3
+
+Two new things! Now you can ask Animation Studio not to generate `width` and `height` rules (in case you're, say, using percentages in a responsive design and don't want to have to overwrite pixel-based measurements constantly). By default, this is set to `true`, meaning that setting it to false won't generate those rules. Here's how you do it:
+
+```scss
+.tuna {
+  @include animation-sequence($tuna-walk-cycle, 1s, false);
+  width: 50%; padding-top: 50%
+}
+```
+
+It's also possible to refer to just a single frame in an animation sprite without knowing the frame's name, just it's number in the sequence:
+
+```scss
+.tuna-paused {
+  @include animation-still($tuna-walk-cycle, 4);
+}
+```
+
+This is useful if you want to have an animation paused on just one particular frame.
 
 ## Possible Future Goals
 
