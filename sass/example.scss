@@ -7,3 +7,7 @@ $tuna-walk-cycle: 'tuna-walk';
 .tuna {
   @include animation-sequence($tuna-walk-cycle, 1s, $extend: false);
 }
+
+.tuna-paused {
+  @include animation-still($tuna-walk-cycle, 4);
+}

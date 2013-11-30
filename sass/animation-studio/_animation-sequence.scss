@@ -19,18 +19,19 @@ $animation-sequence-extend: true !default;
 
 }
 
-@mixin animation-sequence($folder, $time, $animation:$animation-sequence-name, $extend: $animation-sequence-extend) {
+@mixin animation-sequence($folder, $time, $animation:$animation-sequence-name, $generate-dimensions: true, $extend: $animation-sequence-extend) {
   $png-path: $folder + "/*.png";
   $sprite-map: sprite-map($png-path);
   $sprite-path: sprite-path($sprite-map);
 
   $steps: length(sprite-names($sprite-map));
 
-  $height: image-height($sprite-path);
-  $width: image-width($sprite-path);
-
-  height: $height / $steps;
-  width: $width;
+  @if $generate-dimensions {
+    $height: image-height($sprite-path);
+    $width: image-width($sprite-path);
+    height: $height / $steps;
+    width: $width;    
+  }
 
   @if $extend {
     @extend %#{sprite-map-name($sprite-map)}-animation-sequence;
@@ -60,3 +61,4 @@ $animation-sequence-extend: true !default;
     }
   }
 }
+
