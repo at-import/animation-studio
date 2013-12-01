@@ -42,10 +42,10 @@
   height: 200px;
   width: 400px;
   background: url('../images/tuna-walk-s77788462e5.png') 0 0 no-repeat;
-  -webkit-animation: walk-cycle 1s steps(12) infinite forwards;
-  -moz-animation: walk-cycle 1s steps(12) infinite forwards;
-  -o-animation: walk-cycle 1s steps(12) infinite forwards;
-  animation: walk-cycle 1s steps(12) infinite forwards;
+  -webkit-animation: walk-cycle 1s steps(12) infinite;
+  -moz-animation: walk-cycle 1s steps(12) infinite;
+  -o-animation: walk-cycle 1s steps(12) infinite;
+  animation: walk-cycle 1s steps(12) infinite;
 }
 
 .tuna-paused {
@@ -56,10 +56,10 @@
 
 .alice {
   background: url('../images/alice-s70adcc6818.png') 0 0 no-repeat;
-  -webkit-animation: 1.5s "cycle" steps(3) infinite forwards;
-  -moz-animation: 1.5s "cycle" steps(3) infinite forwards;
-  -o-animation: 1.5s "cycle" steps(3) infinite forwards;
-  animation: 1.5s "cycle" steps(3) infinite forwards;
+  -webkit-animation: 1.5s "cycle" steps(3) 3;
+  -moz-animation: 1.5s "cycle" steps(3) 3;
+  -o-animation: 1.5s "cycle" steps(3) 3;
+  animation: 1.5s "cycle" steps(3) 3;
   background-size: 100% auto;
   width: 31.25%;
   padding-top: 48.73%;
@@ -107,10 +107,10 @@
 
 .alice-frightened {
   background: url('../images/alice-s70adcc6818.png') 0 0 no-repeat;
-  -webkit-animation: freak-out 1.5s steps(2) infinite forwards;
-  -moz-animation: freak-out 1.5s steps(2) infinite forwards;
-  -o-animation: freak-out 1.5s steps(2) infinite forwards;
-  animation: freak-out 1.5s steps(2) infinite forwards;
+  -webkit-animation: freak-out 1.5s steps(2) infinite;
+  -moz-animation: freak-out 1.5s steps(2) infinite;
+  -o-animation: freak-out 1.5s steps(2) infinite;
+  animation: freak-out 1.5s steps(2) infinite;
   background-size: 100% auto;
   width: 31.25%;
   padding-top: 48.73%;

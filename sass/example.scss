@@ -16,7 +16,7 @@ $alice: 'alice';
 @include animation-sequence-sprite-generator($alice);
 
 .alice {
-	@include animation-sequence($alice, "cycle", 1.5s, false, false);
+	@include animation-sequence($alice, "cycle", 1.5s, 3, false, false);
 	background-size: 100% auto;
 	width: 31.25%;
 	padding-top: 48.73%;

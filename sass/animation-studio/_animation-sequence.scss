@@ -19,7 +19,7 @@ $animation-sequence-extend: true !default;
 
 }
 
-@mixin animation-sequence($folder, $time, $animation:$animation-sequence-name, $generate-dimensions: true, $extend: $animation-sequence-extend) {
+@mixin animation-sequence($folder, $time, $animation:$animation-sequence-name, $options: infinite, $generate-dimensions: true, $extend: $animation-sequence-extend) {
   $png-path: $folder + "/*.png";
   $sprite-map: sprite-map($png-path);
   $sprite-path: sprite-path($sprite-map);
@@ -40,7 +40,7 @@ $animation-sequence-extend: true !default;
     @include animation-sequence-sprite-generator($folder, $extend);
   }
 
-  @include animation(unquote($animation) $time steps($steps) infinite forwards);
+  @include animation(unquote($animation) $time steps($steps) $options);
 }
 
 @mixin animation-sequence-keyframes($folder, $name: $animation-sequence-name) {
@@ -85,7 +85,7 @@ $animation-sequence-extend: true !default;
   @return $number / ($number * 0 + 1);
 }
 
-@mixin animation-sequence-span($folder, $time, $animation-sequence-span-name, $start-frame, $end-frame, $loops: infinite, $generate-dimensions: true, $extend: $animation-sequence-extend) {
+@mixin animation-sequence-span($folder, $time, $animation-sequence-span-name, $start-frame, $end-frame, $options: infinite, $generate-dimensions: true, $extend: $animation-sequence-extend) {
   $png-path: $folder + "/*.png";
   $sprite-map: sprite-map($png-path);
   $sprite-path: sprite-path($sprite-map);
@@ -111,7 +111,7 @@ $animation-sequence-extend: true !default;
     @include animation-sequence-sprite-generator($folder, $extend);
   }
 
-  @include animation(unquote($animation-sequence-span-name) $time steps($steps) $loops forwards);
+  @include animation(unquote($animation-sequence-span-name) $time steps($steps) $options);
 }
 
 @mixin animation-sequence-keyframes-span($folder, $name, $start-frame, $end-frame) {
