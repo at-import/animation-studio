@@ -7,8 +7,6 @@ node_modules
 .compass/templates
 .compass/*.gemspec
 !.compass/.template/
-Gemfile
-Gemfile.lock
 export
 *.gem
 *.DS_Store

@@ -9,7 +9,7 @@ $tuna-walk-cycle: 'tuna-walk';
 }
 
 .tuna-paused {
-  @include animation-still($tuna-walk-cycle, 4);
+  @include animation-still($tuna-walk-cycle, 10);
 }
 
 $alice: 'alice';

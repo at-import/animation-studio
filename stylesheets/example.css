@@ -49,17 +49,17 @@
 }
 
 .tuna-paused {
-  background: url('../images/tuna-walk-s77788462e5.png') 0 27.08333% no-repeat;
+  background: url('../images/tuna-walk-s77788462e5.png') 0 90.90909% no-repeat;
   height: 200px;
   width: 400px;
 }
 
 .alice {
-  background: url('../images/alice-s70adcc6818.png') 0 0 no-repeat;
-  -webkit-animation: 1.5s "cycle" steps(3) 3;
-  -moz-animation: 1.5s "cycle" steps(3) 3;
-  -o-animation: 1.5s "cycle" steps(3) 3;
-  animation: 1.5s "cycle" steps(3) 3;
+  background: url('../images/alice-sc050641834.png') 0 0 no-repeat;
+  -webkit-animation: 1.5s "cycle" steps(6) 3;
+  -moz-animation: 1.5s "cycle" steps(6) 3;
+  -o-animation: 1.5s "cycle" steps(6) 3;
+  animation: 1.5s "cycle" steps(6) 3;
   background-size: 100% auto;
   width: 31.25%;
   padding-top: 48.73%;
@@ -71,7 +71,7 @@
   }
 
   100% {
-    background-position: 0 150%;
+    background-position: 0 120%;
   }
 }
 
@@ -81,7 +81,7 @@
   }
 
   100% {
-    background-position: 0 150%;
+    background-position: 0 120%;
   }
 }
 
@@ -91,7 +91,7 @@
   }
 
   100% {
-    background-position: 0 150%;
+    background-position: 0 120%;
   }
 }
 
@@ -101,12 +101,12 @@
   }
 
   100% {
-    background-position: 0 150%;
+    background-position: 0 120%;
   }
 }
 
 .alice-frightened {
-  background: url('../images/alice-s70adcc6818.png') 0 0 no-repeat;
+  background: url('../images/alice-sc050641834.png') 0 0 no-repeat;
   -webkit-animation: freak-out 1.5s steps(2) infinite;
   -moz-animation: freak-out 1.5s steps(2) infinite;
   -o-animation: freak-out 1.5s steps(2) infinite;
@@ -122,7 +122,7 @@
   }
 
   100% {
-    background-position: 0 100%;
+    background-position: 0 40%;
   }
 }
 
@@ -132,7 +132,7 @@
   }
 
   100% {
-    background-position: 0 100%;
+    background-position: 0 40%;
   }
 }
 
@@ -142,7 +142,7 @@
   }
 
   100% {
-    background-position: 0 100%;
+    background-position: 0 40%;
   }
 }
 
@@ -152,6 +152,6 @@
   }
 
   100% {
-    background-position: 0 100%;
+    background-position: 0 40%;
   }
 }

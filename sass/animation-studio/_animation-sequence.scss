@@ -68,9 +68,13 @@ $animation-sequence-extend: true !default;
   $sprite-path: sprite-path($sprite-map);
   $height: image-height($sprite-path);
   $frames: length(sprite-names($sprite-map));
-  $frame-height: $height/$frames; 
-  $frame-position: percentage((($frame * ($frame-height)) - $frame-height + ($frame-height/$frame)) / $height);
   
+  // Find what the unit of increment is for each frame: 3 = 50%, 4 = 33%, 5 = 25% etc.
+  $frame-unit: percentage(1/($frames - 1));
+
+  // Then for the starting position, multiply that by the frame. For instance... 1 = 0%, 2 = 50%, 3 = 100%
+  $frame-position: $frame * $frame-unit;
+
   background: $sprite-map 0 $frame-position no-repeat;
 
   @if $generate-dimensions {
