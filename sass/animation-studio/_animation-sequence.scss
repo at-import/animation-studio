@@ -40,7 +40,7 @@ $animation-sequence-extend: true !default;
     @include animation-sequence-sprite-generator($folder, $extend);
   }
 
-  @include animation(unquote($animation) $time steps($steps) infinite);
+  @include animation(unquote($animation) $time steps($steps) infinite forwards);
 }
 
 @mixin animation-sequence-keyframes($folder, $name: $animation-sequence-name) {
@@ -78,5 +78,70 @@ $animation-sequence-extend: true !default;
     $width: image-width($sprite-path);
     height: $height / $frames;
     width: $width;    
+  }
+}
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@mixin animation-sequence-span($folder, $time, $animation-sequence-span-name, $start-frame, $end-frame, $loops: infinite, $generate-dimensions: true, $extend: $animation-sequence-extend) {
+  $png-path: $folder + "/*.png";
+  $sprite-map: sprite-map($png-path);
+  $sprite-path: sprite-path($sprite-map);
+  $sprite-height: image-height($sprite-path);
+  $frames: length(sprite-names($sprite-map));
+  $frame-height: $sprite-height/$frames; 
+  $start-frame-position: nth(sprite-position($sprite-map, $start-frame), 2);
+  $end-frame-position: nth(sprite-position($sprite-map, $end-frame), 2);
+
+
+  $steps: (($start-frame-position - $end-frame-position) + $frame-height) / $frame-height;
+
+  @if $generate-dimensions {
+    $width: image-width($sprite-path);
+    height: $frame-height;
+    width: $width;    
+  }
+
+  @if $extend {
+    @extend %#{sprite-map-name($sprite-map)}-animation-sequence;
+  }
+  @else {
+    @include animation-sequence-sprite-generator($folder, $extend);
+  }
+
+  @include animation(unquote($animation-sequence-span-name) $time steps($steps) $loops forwards);
+}
+
+@mixin animation-sequence-keyframes-span($folder, $name, $start-frame, $end-frame) {
+  $png-path: $folder + "/*.png";
+  $sprite-map: sprite-map($png-path);
+  $sprite-path: sprite-path($sprite-map);
+  $height: image-height($sprite-path);
+  $frames: length(sprite-names($sprite-map));
+  $frame-height: $height/$frames;   
+
+  $start-position: nth(sprite-position($sprite-map, $start-frame), 2) * -1;
+  $start-frame-index: strip-units($start-position/ $frame-height);
+  $end-position: nth(sprite-position($sprite-map, $end-frame), 2) * -1;
+  $end-frame-index: strip-units($end-position/ $frame-height);
+
+  // Find what the unit of increment is for each frame: 3 = 50%, 4 = 33%, 5 = 25% etc.
+  $frame-unit: percentage(1/($frames - 1));
+
+  // Then for the starting position, multiply that by the frame. For instance... 1 = 0%, 2 = 50%, 3 = 100%
+  $start-position: $start-frame-index * $frame-unit;
+
+  // For the ending position, add an extra frame. For instance... 2 = 100%, 3 = 150%
+  $end-position: ($end-frame-index + 1) * $frame-unit;
+
+  @include keyframes($name) {
+    0% {
+      background-position: 0 $start-position;
+    }
+    100% {
+      background-position: 0 $end-position;
+    }
   }
 }

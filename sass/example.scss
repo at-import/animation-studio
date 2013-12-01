@@ -11,3 +11,23 @@ $tuna-walk-cycle: 'tuna-walk';
 .tuna-paused {
   @include animation-still($tuna-walk-cycle, 4);
 }
+
+$alice: 'alice';
+@include animation-sequence-sprite-generator($alice);
+
+.alice {
+	@include animation-sequence($alice, "cycle", 1.5s, false, false);
+	background-size: 100% auto;
+	width: 31.25%;
+	padding-top: 48.73%;
+}
+@include animation-sequence-keyframes($alice, "cycle");
+
+.alice-frightened {
+	@include animation-sequence-span($alice, 1.5s, "freak-out", "alice-frightened_1", "alice-frightened_2", infinite, false, false);
+	background-size: 100% auto;
+	width: 31.25%;
+	padding-top: 48.73%;
+}
+
+@include animation-sequence-keyframes-span($alice, "freak-out", "alice-frightened_1", "alice-frightened_2");

@@ -42,14 +42,116 @@
   height: 200px;
   width: 400px;
   background: url('../images/tuna-walk-s77788462e5.png') 0 0 no-repeat;
-  -webkit-animation: walk-cycle 1s steps(12) infinite;
-  -moz-animation: walk-cycle 1s steps(12) infinite;
-  -o-animation: walk-cycle 1s steps(12) infinite;
-  animation: walk-cycle 1s steps(12) infinite;
+  -webkit-animation: walk-cycle 1s steps(12) infinite forwards;
+  -moz-animation: walk-cycle 1s steps(12) infinite forwards;
+  -o-animation: walk-cycle 1s steps(12) infinite forwards;
+  animation: walk-cycle 1s steps(12) infinite forwards;
 }
 
 .tuna-paused {
   background: url('../images/tuna-walk-s77788462e5.png') 0 27.08333% no-repeat;
   height: 200px;
   width: 400px;
+}
+
+.alice {
+  background: url('../images/alice-s70adcc6818.png') 0 0 no-repeat;
+  -webkit-animation: 1.5s "cycle" steps(3) infinite forwards;
+  -moz-animation: 1.5s "cycle" steps(3) infinite forwards;
+  -o-animation: 1.5s "cycle" steps(3) infinite forwards;
+  animation: 1.5s "cycle" steps(3) infinite forwards;
+  background-size: 100% auto;
+  width: 31.25%;
+  padding-top: 48.73%;
+}
+
+@-moz-keyframes cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 150%;
+  }
+}
+
+@-webkit-keyframes cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 150%;
+  }
+}
+
+@-o-keyframes cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 150%;
+  }
+}
+
+@keyframes cycle {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 150%;
+  }
+}
+
+.alice-frightened {
+  background: url('../images/alice-s70adcc6818.png') 0 0 no-repeat;
+  -webkit-animation: freak-out 1.5s steps(2) infinite forwards;
+  -moz-animation: freak-out 1.5s steps(2) infinite forwards;
+  -o-animation: freak-out 1.5s steps(2) infinite forwards;
+  animation: freak-out 1.5s steps(2) infinite forwards;
+  background-size: 100% auto;
+  width: 31.25%;
+  padding-top: 48.73%;
+}
+
+@-moz-keyframes freak-out {
+  0% {
+    background-position: 0 0%;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@-webkit-keyframes freak-out {
+  0% {
+    background-position: 0 0%;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@-o-keyframes freak-out {
+  0% {
+    background-position: 0 0%;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes freak-out {
+  0% {
+    background-position: 0 0%;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
 }
