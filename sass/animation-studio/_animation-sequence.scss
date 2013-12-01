@@ -73,7 +73,7 @@ $animation-sequence-extend: true !default;
   $frame-unit: percentage(1/($frames - 1));
 
   // Then for the starting position, multiply that by the frame. For instance... 1 = 0%, 2 = 50%, 3 = 100%
-  $frame-position: $frame * $frame-unit;
+  $frame-position: ($frame - 1) * $frame-unit;
 
   background: $sprite-map 0 $frame-position no-repeat;
 
