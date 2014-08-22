@@ -41,7 +41,7 @@ gem 'animation-studio', '~>0.1.1'
 `@import "animation-studio";`
 
 ## Animation Sequences
-Using the magic of the `steps()` animation timing function, we can create [walkcycles](http://codepen.io/rachelnabors/pen/bpAJH) [and](http://codepen.io/rachelnabors/full/rCost) [more](http://lessconf.lesseverything.com/index_old.html). But the method requires careful sprite sheet creation and positioning calculations. It does not lend itself to a fast-paced environment or iterative development process. Until now. By leveraging Sass and Compass, we're able to boil down the process to a set of simple mixins.
+Using the magic of the `steps()` animation timing function, we can create [walkcycles](http://codepen.io/rachelnabors/pen/bpAJH) and [more](http://codepen.io/rachelnabors/full/rCost). But the method requires careful sprite sheet creation and positioning calculations. It does not lend itself to a fast-paced environment or iterative development process. Until now. By leveraging Sass and Compass, we're able to boil down the process to a set of simple mixins.
 
 The first thing you need to do is create a variable set to the folder name your individual sequence images are in. This is the full path relative to your `images` directory. The images in the sprite folder should be named alphabetically in the order you'd like them to appear in the sequence.
 
